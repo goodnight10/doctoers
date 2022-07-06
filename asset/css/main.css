@@ -30,10 +30,13 @@
 .sc-slide .desc1{
     margin-left: 10px;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 20px;
+    overflow: hidden;
 }
 .sc-slide .desc2{
     font-size: 180px;
+    line-height: 250px;
+    overflow: hidden;
 }
 
 .sc-slide .swiper-slide.swiper-slide-visible.swiper-slide-active img{
@@ -97,7 +100,19 @@
 .intro-area .link-intro:hover{
     background: #c2b093;
     color: #fff;
+    /* animation: btn 5s; */
+
+
 }
+/* @keyframes btn {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+} */
 .intro-area .link-intro::after{
     content: '';
     display: inline-block;
