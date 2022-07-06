@@ -151,7 +151,7 @@ $('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click
 
 
       /**
-     *동의 체크하면 체크 되게
+     *동의 체크하면 체크,해제
      *
      * @version 1.0.0
      * @since 2022-07-06
