@@ -1,0 +1,273 @@
+/* 메인슬라이드-------------------------------- */
+.sc-slide{
+    margin-top: 24px;
+}
+.sc-slide .main-slide{
+    height: 100vh;
+}
+.sc-slide figure{
+    display: block;
+    position: relative;
+}
+.sc-slide img{
+    width: 100%;
+    transform: scale(1.1);
+    object-fit: cover;
+}
+.sc-slide .desc-wrap{
+    bottom: 100px; left: 100px;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+}
+
+.sc-slide em{
+    font-weight: bold;
+}
+.sc-slide .desc1{
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.sc-slide .desc2{
+    font-size: 180px;
+}
+
+.sc-slide .swiper-slide.swiper-slide-visible.swiper-slide-active img{
+    transform: scale(1);
+    transition: 4s;
+}
+
+.sc-slide .swiper-pagination{
+    position: absolute;
+    bottom: 95px;
+    left: 65px;
+    width: 10%;
+    height: 20px;
+   
+}
+.sc-slide .swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+    margin: 5px 12px !important;
+    border-radius: 100%;
+    padding: 0;
+    background: hsla(0,0%,100%,.7);
+    opacity: 1;
+}
+.sc-slide .swiper-pagination-bullet-active{
+    
+}
+
+
+
+
+
+
+/* 공통제목,버튼 */
+.intro-area{
+    text-align: center;
+}
+.intro-area .subtitle{
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+.intro-area .title{
+    font-size: 80px;
+    /* line-height: 100px; */
+}
+.intro-area .desc{
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 25px;
+}
+.intro-area .link-intro{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #c2b093;
+    border-radius: 50px;
+    color: #c2b093;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+.intro-area .link-intro:hover{
+    background: #c2b093;
+    color: #fff;
+}
+.intro-area .link-intro::after{
+    content: '';
+    display: inline-block;
+    background: url(../images/arrow-b.svg) 100% center;
+    background-position: cover; 
+    width: 20px; height: 10px;
+    box-sizing: border-box;
+}
+
+/* 닥터스그룹-------------------------------- */
+.sc-doctors-group {
+    padding: 250px 0 200px;
+    display: flex;
+    justify-content: center;
+}
+.sc-doctors-group .intro-area .subtitle{
+    padding-bottom: 30px;
+}
+.sc-doctors-group .intro-area .desc{
+    padding: 40px 0 60px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.sc-doctors-group .doctors-group-wrap{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.sc-doctors-group .img-box{
+    width: 343px; height: 358px;
+    overflow: hidden;
+    
+}
+.sc-doctors-group .img-box img{
+    width: 100%;
+}
+
+.sc-doctors-group .desc-box{
+    position: absolute;
+    top: 330px;
+}
+.sc-doctors-group .desc-box .title{
+    font-size: 50px;
+    padding: 2% 0;
+    /* webkit-text-fill-color: transparent; */
+    background: linear-gradient(0deg,#333 55%,#fff 0);
+    -webkit-background-clip: text;
+    
+}
+.sc-doctors-group .desc-box .desc{
+    padding: 2% 0;
+    line-height: 25px;
+}
+
+/* 브랜드스토리--------------------------- */
+
+.sc-brand-story{padding: 120px 0;}
+
+.sc-brand-story .intro-area{
+    position: relative;
+    margin-bottom: 30px;
+}
+.sc-brand-story .intro-area .title{
+    font-size: 64px;
+}
+.sc-brand-story .intro-area .link-intro{
+    position: absolute;
+    right: 250px; 
+    bottom: 0;
+}
+
+.sc-brand-story .video-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.sc-brand-story .video-wrap{
+    width: 960px; height: 540px;
+    z-index: 2;
+}
+.sc-brand-story .video-wrap source{
+    width: 100%;
+    
+}
+.sc-brand-story .video-bg{
+    z-index: 1;
+    background: url(../images/bs-bg.jpg);
+    width: 83%; height: 600px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+.sc-brand-story .video-bg .title{
+    color:#fff;
+    position: absolute;
+    top: 50px; left: 50px;
+}
+.sc-brand-story .video-bg .desc{
+    position: absolute;
+    color:#fff;
+    bottom: 40px;
+    left: 290px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+/* 시그니처 ----------------------------*/
+.sc-signature{padding: 200px 0;}
+
+
+.sc-signature .intro-area{
+    position: relative;
+}
+.sc-signature .intro-area .title{
+    font-size: 64px;
+}
+.sc-signature .intro-area .link-intro{
+    position: absolute;
+    right: 250px;
+    bottom: -5px;
+}
+
+.sc-signature .signature-area{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    background: url(../images/2-bg.png) 53% 40%/24% no-repeat;
+    background-size: 350px auto;
+    background-position: top 120px left 600px;
+    position: relative;
+}
+
+.sc-signature .signature-area::after{
+    content: "";
+    position: absolute;
+    top: 76%;
+    left: 8%;
+    width: 0;
+    height: 2px;
+    background: #e5e3df;
+    display: inline-block;
+    width: 84%;
+}
+
+.sc-signature .signature-wrap{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sc-signature .img-box{
+    border-top-left-radius: 100% 80%;
+    border-top-right-radius: 100% 80%;
+    overflow: hidden;
+}
+.sc-signature .signature-wrap:hover{
+    z-index: 3;
+}
+.sc-signature .signature-wrap:hover .img-box img{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.sc-signature .desc-box{}
+.sc-signature .desc-box .title{
+    font-size: 50px;
+    padding: 30px 0 60px;
+}
+.sc-signature .desc-box .desc{
+    line-height: 20px;
+}

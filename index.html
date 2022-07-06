@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./asset/css/layout.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+
+    <script src="./asset/js/jquery-1.12.4.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="./asset/js/custom.js"></script>
+</head>
+</head>
+
+<body>
+    <header class="header">
+        <div class="dimmed"></div>
+        <div class="swiper top-slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="link-notice">
+                        <p class="notice-txt">NOTICE&emsp;|&emsp;가로수길 DOCTORS GRAND OPEN</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-area">
+            <a href="" class="link-group">doctors group</a>
+            <h1 class="logo"><a href="" class="link-logo"><span class="blind">닥터스 피부과</span></a></h1>
+            <div class="menu-wrap">
+                <a href="" class="btn-reserve"><span class="txt">상담예약신청</span></a>
+                <a href="" class="btn-menu">
+                    <i class="1"></i>
+                    <i class="2"></i>
+                    <i class="3"></i>
+                    <i class="4"></i>
+                </a>
+            </div>
+        </div>
+        <div class="reserve-pop">
+            <form action="" method="post" class="reserve">
+                <fieldset>
+                    <legend>상담/예약 신청</legend>
+                    <div class="name-wrap">
+                        <label for="name" class="blind">이름</label>
+                        <input class="name-box" type="text" id="name" placeholder="이름">
+                    </div>
+                    <div class="call-wrap">
+                        <label for="call" class="blind">연락처</label>
+                        <input class="call-box" type="number" id="call" placeholder="연락처 ex)01022221111">
+                    </div>
+                    <div class="select-wrap">
+                        <label for="" class="blind">상담형식 선택</label>
+                        <select class="select-box" id="">
+                            <option value="" selected>카톡상담</option>
+                            <option value="">전화상담</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" class="agr"><label for="agr" class="agr-label">개인정보 수집/이용 동의하기</label>
+                    <button class="btn-reserv" type="button">상담신청</button>
+                </fieldset>
+                <button class="btn-close" type="button"><span class="blind">닫기</span></button>
+            </form>
+        </div>
+        <div class="gnb-pop">
+            <nav>
+                <ul class="gnb-list g01">
+                    <li class="gnb-item">
+                        <a href="" class="link-gnbbox">
+                            <span class="num">01</span>
+                            <h3 class="title">Avenue - D</h3>
+                        </a>
+                        <ul class="gnbbox-list">
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">병원 안내</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">피부과전문의</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">상담 예약</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">공지 이슈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="gnb-list g02">
+                    <li class="gnb-item">
+                        <a href="" class="link-gnbbox">
+                            <span class="num">02</span>
+                            <h3 class="title">Avenue - D</h3>
+                        </a>
+                        <ul class="gnbbox-list">
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">병원 안내</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">피부과전문의</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">상담 예약</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">공지 이슈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="gnb-list g03">
+                    <li class="gnb-item">
+                        <a href="" class="link-gnbbox">
+                            <span class="num">03</span>
+                            <h3 class="title">Avenue - D</h3>
+                        </a>
+                        <ul class="gnbbox-list">
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">병원 안내</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">피부과전문의</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">상담 예약</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">공지 이슈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="gnb-list g04">
+                    <li class="gnb-item">
+                        <a href="" class="link-gnbbox">
+                            <span class="num">04</span>
+                            <h3 class="title">Avenue - D</h3>
+                        </a>
+                        <ul class="gnbbox-list">
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">병원 안내</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">피부과전문의</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">상담 예약</a></li>
+                            <li class="gnbbox-item"><a href="" class="link-gnbsub">공지 이슈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h2 class="copy">Copyright ⓒ SINSA DOCTORS .All rights reserved.</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="sc-slide">
+            <h2 class="blind">소개 슬라이드</h2>
+            <div class="swiper main-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./asset/images/slide1.jpg" alt="시간을 멈추는 피부의 힘을 키웁니다" class="slide-img">
+                            <div class="desc-wrap">
+                                <figcaption class="desc1"><p>시간을 멈추는 <em>피부의 힘</em>을 키웁니다</p></figcaption>
+                                <figcaption class="desc2"><h3 class="title">Heal-aging</h3></figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./asset/images/slide2.jpg" alt="시간을 이기는 자연스러운 아름다움" class="slide-img">
+                            <div class="desc-wrap">
+                                <figcaption class="desc1"><p>시간을 이기는 <em>자연스러운 아름다움</em></p></figcaption>
+                                <figcaption class="desc2"><h3 class="title">Natural-aging</h3></figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./asset/images/slide3.jpg" alt="결이 다른 과정을 만드는 격이 다른 결과" class="slide-img">
+                            <div class="desc-wrap">
+                                <figcaption class="desc1"><p><em>결</em>이 다른 과정을 만드는 <em>격</em>이 다른 결과</p></figcaption>
+                                <figcaption class="desc2"><h3 class="title">Heal-aging</h3></figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-pagination">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="common-inner">
+            <section class="sc-doctors-group">
+                <h2 class="blind">닥터스 그룹 소개</h2>
+                <div class="doctors-group-wrap g01">
+                    <div class="img-box">
+                        <img src="./asset/images/1-1.jpg" alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
+                    </div>
+                    <div class="desc-box">
+                        <h3 class="title">Daily Life</h3>
+                        <p class="desc">일상 속에서 마주하는 수 많은 피부 고민들만큼<br>닥터스는 당신의 일상에 스며들 것입니다.</p>
+                    </div>
+                </div>
+                <div class="intro-area">
+                    <p class="subtitle">365일, 당신의 매일을 보다 특별하게</p><em class="title">One and Only</em>
+                    <p class="desc">건강하고 오래 지속되는 아름다움을 지향하는 브랜드 닥터스는<br>하나뿐인 당신의 하나뿐인 피부를 위한 평생의 동반자이자 주치의입니다.</p>
+                    <a href="" class="link-intro">DOCTORS GROUP</a>
+                </div>
+                <div class="doctors-group-wrap g02">
+                    <div class="img-box">
+                        <img src="./asset/images/1-2.jpg" alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
+                    </div>
+                    <div class="desc-box">
+                        <h3 class="title">Daily Life</h3>
+                        <p class="desc">일상 속에서 마주하는 수 많은 피부 고민들만큼<br>닥터스는 당신의 일상에 스며들 것입니다.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="sc-brand-story">
+            <h2 class="blind">브랜드 스토리</h2>
+            <div class="common-inner">
+                <div class="intro-area">
+                    <p class="subtitle">피부 하나만을 바라본 그 간의 여정이 만든 결과</p><em class="title">The Journey to<br>Eternal Anti-Aging</em>
+                    <a href="" class="link-intro">BRAND STORY</a>
+                </div>
+            </div>
+            <div class="video-area">
+                <video class="video-wrap" muted autoplay playsinline loop controls webkit-playsinline>
+                    <source src="http://www.dr-antiaging.com/video/main_cont03_vodeo01_min_v3.mp4"
+                       type="video/mp4">
+                    </source>
+                </video>
+               <div class="video-bg">
+                   <h3 class="title">GAROSU-GIL DOCTORS</h3>
+                   <p class="desc">가로수길 닥터스는 K-Beauty의 중심, 가로수길에 위치한 국내 최초 플래그쉽 클리닉으로<br>
+                       VIP분들을 위한 프라이빗 서비스와 해외 고객분들을 위한 글로벌 안티에이징센터로<br>
+                       마련되어 있습니다.</p>
+               </div>
+            </div>
+        </section>
+
+        <div class="common-inner">
+            <section class="sc-signature">
+                <h2 class="blind">시그니처</h2>
+                <div class="intro-area">
+                    <p class="subtitle">365일, 당신의 매일이 좀 더 아름답기를</p><em class="title">365 days of thinking about<br>your anti-aging.</em>
+                    <a href="" class="link-intro">SIGNATURE</a>
+                </div>
+                <div class="signature-area">
+                    <a href="" class="signature-wrap">
+                        <div class="img-box">
+                            <img src="./asset/images/2-1.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                        </div>
+                        <div class="desc-box">
+                            <h3 class="title">Natural-aging</h3>
+                            <p class="desc">시간을 이기는 자연스러운 아름다움<br>기술력과 경험이 집약된 무통 울써마지&nbsp;&nbsp;</p>
+                        </div>
+                    </a>
+                    <a href="" class="signature-wrap">
+                        <div class="img-box">
+                            <img src="./asset/images/2-2.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                        </div>
+                        <div class="desc-box">
+                            <h3 class="title">Natural-aging</h3>
+                            <p class="desc">시간을 이기는 자연스러운 아름다움<br>기술력과 경험이 집약된 무통 울써마지&nbsp;&nbsp;</p>
+                        </div>
+                    </a>
+                    <a href="" class="signature-wrap">
+                        <div class="img-box">
+                            <img src="./asset/images/2-3.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                        </div>
+                        <div class="desc-box">
+                            <h3 class="title">Natural-aging</h3>
+                            <p class="desc">시간을 이기는 자연스러운 아름다움<br>기술력과 경험이 집약된 무통 울써마지&nbsp;&nbsp;</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="common-inner">
+                <div class="contact-area">
+                    <h3 class="corp">GAROSU-GIL DOCTORS</h3>
+                    <div class="contact-wrap">
+                        <div class="contact-box c01">
+                            <p class="contact">문의전화</p>
+                            <a href="tel:02-6203-1637" class="link-contact call">02.6203.1637</a>
+                        </div>
+                        <div class="contact-box c02">
+                            <p class="contact">플러스 친구</p>
+                            <a href="" class="link-contact kakao"><span class="blind">카카오톡 친구-닥터스피부과의원 신사</span></a>
+                        </div>
+                        <div class="contact-box c03">
+                            <p class="contact">오시는 길</p>
+                            <p class="link-contact map">서울시 강남구 가로수길 17<br>(신사동 536-17)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reserve-form">
+                    <form action="" method="post" class="reserve">
+                        <fieldset>
+                            <legend>상담/예약 신청</legend>
+                            <div class="name-wrap">
+                                <label for="name" class="blind">이름</label>
+                                <input class="name-box" type="text" id="name" placeholder="이름">
+                            </div>
+                            <div class="call-wrap">
+                                <label for="call" class="blind">연락처</label>
+                                <input class="call-box" type="text" id="call" placeholder="연락처 ex)01022221111">
+                            </div>
+                            <div class="select-wrap">
+                                <label for="" class="blind">상담형식 선택</label>
+                                <select class="select-box" id="">
+                                    <option value="" selected>카톡상담</option>
+                                    <option value="">전화상담</option>
+                                </select>
+                            </div>
+                            <input type="checkbox" class="agr"><label for="agr" class="agr-label">개인정보 수집/이용 동의하기</label>
+                            <button class="btn-reserv" type="button">상담신청</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="common-inner">
+                <div class="left">
+                    <div class="info-area">
+                        <a href="" class="link-info">개인정보취급방침</a>
+                        <a href="" class="link-info">사이트 이용약관</a>
+                        <a href="" class="link-info">로그인</a>
+                        <a href="" class="link-info">비급여금액안내</a>
+                        <a href="" class="link-info">인재채용</a>
+                    </div>
+                    <div class="addr-area">
+                        <address class="addr-wrap">
+                            <p><span>닥터스피부과의원 신사점</span><span>사업자등록번호 : 259-40-00613</span><span>제휴문의 : msgcoop@naver.com</span></p>
+                            <p><span>대표자 : 성 현 철</span><span>본관 : 서울시 강남구 도산대로 107, 10층 (SYH성형타워)</span></p>
+                            <p><span>별관 : 서울시 강남구 가로수길 17 (신사동 536-17)</span><span>COPYRIGHT ⓒ SINSA DOCTORS. ALL RIGHTS RESERVED</span></p>
+                        </address>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 class="award"><span class="blind">GDWED award WINNER</span></h3>
+                    <div class="family-wrap">
+                        <a href="" class="btn-family-site">Family Site</a>
+                        <ul class="family-list">
+                            <li class="family-item"><a href="" class="link-family">닥터스피부과</a></li>
+                            <li class="family-item"><a href="" class="link-family">CN</a></li>
+                            <li class="family-item"><a href="" class="link-family">EN</a></li>
+                            <li class="family-item"><a href="" class="link-family">VI</a></li>
+                            <li class="family-item"><a href="" class="link-family">닥터스코스메틱</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="btn-top" type="button"><span class="blind">아래로가기/위로가기</span></button> -->
+    </footer>
+</body>
+
+</html>
