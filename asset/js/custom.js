@@ -1,4 +1,11 @@
 $(function () {
+      /**
+     * 헤더 슬라이드
+     *
+     * @version 1.0.0
+     * @since 2022-07-04
+     * @author jy
+     */
   var swiper = new Swiper(".top-slide", {
     slidesPerView: 1,
     loop: true,
@@ -8,7 +15,13 @@ $(function () {
     direction: "vertical",
   });
 
-
+      /**
+     * 메인 슬라이드
+     *
+     * @version 1.0.0
+     * @since 2022-07-04
+     * @author jy
+     */
   var swiper = new Swiper(".main-slide", {
     slidesPerView: 1,
     loop: true,
@@ -23,7 +36,33 @@ $(function () {
   });
 
 
-  //
+    /**
+     * 슬라이드 나타나면 글자도 나타나게
+     *
+     * @version 1.0.0
+     * @since 2022-07-06
+     * @author jy
+     */
+
+  $('.swiper-slide.swiper-slide-visible.swiper-slide-active').click(function () {
+    idx = $(this).index();
+    item = $('.desc-wrap').eq(idx).find('.hide-el')
+    const all=gsap.to('.desc-wrap .hide-el', {y:'-100%',paused: true,opacity:0})
+    const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.5,paused: true,opacity:1})
+    all.play()
+    motion.play()
+})
+$('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click')
+
+
+
+      /**
+     * 헤더 색상변환, 고정
+     *
+     * @version 1.0.0
+     * @since 2022-07-05
+     * @author jy
+     */
   $(window).scroll(function () {
     const curr = $(window).scrollTop();
     const target = $('.swiper-pagination').offset().top;
@@ -35,8 +74,13 @@ $(function () {
 
   })
 
-  //예약팝업
-
+      /**
+     * 예약버튼 누르면 예약모달팝업
+     *
+     * @version 1.0.0
+     * @since 2022-07-05
+     * @author jy
+     */
   $('.btn-reserve').click(function (e) {
     e.preventDefault();
     $('.reserve-pop, .dimmed').addClass('active');
@@ -49,7 +93,13 @@ $(function () {
     $('body').removeClass('hidden');
   })
 
-  //메뉴팝업
+      /**
+     * 메뉴
+     *
+     * @version 1.0.0
+     * @since 2022-07-06
+     * @author jy
+     */
 
   $('.btn-menu').click(function (e) {
     e.preventDefault();
@@ -61,10 +111,12 @@ $(function () {
     } else {
       $('body').addClass('hidden');
     }
-    //메뉴 구역
+    //메뉴가 만약 고정, 색상변환됐다면 되돌리기
     if ($('.menu-area').hasClass('fixed')) {
       $('.menu-area').removeClass('fixed')
     }
+
+
     // $('.btn-menu').toggleClass('close');
     //gnb-pop이 active클래스 있다면 삭제, 없다면 추가
     if ($('.gnb-pop').hasClass('active')) {
@@ -83,18 +135,40 @@ $(function () {
     paused: true
   })
 
-  //메뉴오퍼시티
+      /**
+     * 메뉴 마우스 올리면 오퍼시티변경
+     *
+     * @version 1.0.0
+     * @since 2022-07-06
+     * @author jy
+     */
 
-  $('.gnb-list').hover(function(){
-    $(this).css('opacity','1');
-    $(this).siblings().css('opacity','0.5');
+  $('.gnb-item').hover(function(){
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
   })
+  $('.gnb-item').eq(0).trigger('hover')
 
 
+      /**
+     *동의 체크하면 체크 되게
+     *
+     * @version 1.0.0
+     * @since 2022-07-06
+     * @author jy
+     */
+$('.agr-label').click(function(){
+  $('.agr-label').toggleClass('active')
+})
 
 
-
-//푸터 패밀리사이트마우스 올리면 메뉴
+    /**
+     * 패일리사이트에 마우스 올리면 메뉴나타나기
+     *
+     * @version 1.0.0
+     * @since 2022-07-06
+     * @author jy
+     */
 $('.family-wrap').hover(function () {
 $('.family-list').toggleClass('active');
 
@@ -117,15 +191,25 @@ doctorsgroup =gsap.timeline({
 doctorsgroup.addLabel('motion1')
 
 .fromTo('.doctors-group-wrap.g01',{
-  y:-100
+  y:-100,
+  opacity:0,
 },{
-  y:50
+  y:50,
+  opacity:1,
 },'motion1')
 
+.fromTo('.doctors-group-wrap .desc-img',{
+  scale:1.3,
+  
+},{
+  scale:1
+})
 .fromTo('.doctors-group-wrap.g02',{
   y:-50,
+  opacity:0
 },{
-  y:100
+  y:100,
+  opacity:1
 },'motion1')
 
 

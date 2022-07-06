@@ -23,6 +23,7 @@
 
 
 .header{
+    position: relative;
 }
 .header .top-slide{
     position: fixed;
@@ -128,6 +129,9 @@
 .header .fixed .btn-reserve{
     border: 1px solid #000;
 }
+.header .btn-reserve fieldset{
+    text-align: center;
+}
 .header .btn-reserve .txt{
     display: inline-block;
     font-size: 14px;
@@ -181,6 +185,7 @@
 .header .reserve legend{
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .header .name-wrap{
@@ -232,9 +237,10 @@
     border: 1px solid #d0d0d0;
     border-radius: 50%;
     margin-right: 10px;
+    transform: translateY(5px);
 }
 .header .agr-label.active::before{
-    background: #f00;
+    content :'✔';
 
 }
 
@@ -304,16 +310,19 @@
     background: url(../images/menu-bg.jpg) no-repeat 100%;
     background-size: 100%;
 }
-.header .gnb-list.g01:hover .gnb-pop{
+.header .gnb-list{
+    display: flex;
+}
+.header .gnb-item.g01:hover .gnb-pop{
     background: url(../images/menu-bg2.jpg) no-repeat 100%;
 }
-.header .gnb-list.g02:hover .gnb-pop{
+.header .gnb-item.g02:hover .gnb-pop{
     background: url(../images/menu-bg2.jpg) no-repeat 100%;
 }
-.header .gnb-list .g03:hover .gnb-pop{
+.header .gnb-item .g03:hover .gnb-pop{
     background: url(../images/menu-bg3.jpg) no-repeat 100%;
 }
-.header .gnb-list .g04:hover .gnb-pop{
+.header .gnb-item .g04:hover .gnb-pop{
     background: url(../images/menu-bg4.jpg) no-repeat 100%;
 }
 .header .gnb-pop.active{
@@ -321,10 +330,8 @@
     display: block;
 }
 .header .gnb-pop nav{
-    display: flex;
     width: 100%;
     margin: 16% auto 0;
-    justify-content: center;
 
 }
 
@@ -347,8 +354,14 @@
     flex-direction: column;
     align-items: center;
 }
-.header .gnb-pop .gnb-list{
+.header .gnb-pop .gnbbox-item{
+    text-align: left;
+}
+.header .gnb-pop .gnb-item{
     flex: 1;
+}
+.header .gnb-pop .gnb-item.active{
+    opacity: 1;
 }
 .header .gnb-pop .gnb-item{
     color: #fff;
@@ -363,6 +376,7 @@
     padding: 10px 0;
     display: block;
     line-height: 17px;
+    
 }
 
 .header .copy{
@@ -519,10 +533,10 @@
     border: 1px solid #d0d0d0;
     border-radius: 50%;
     margin-right: 10px;
+    transform: translateY(5px);
 }
 .footer .agr-label.active::before{
-    background: #f00;
-
+    content :'✔';
 }
 
 

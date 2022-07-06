@@ -24,6 +24,9 @@
 .sc-slide em{
     font-weight: bold;
 }
+.sc-slide figcaption{
+    display: block;
+}
 .sc-slide .desc1{
     margin-left: 10px;
     font-size: 20px;
