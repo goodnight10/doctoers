@@ -44,15 +44,15 @@ $(function () {
      * @author jy
      */
 
-  $('.swiper-slide.swiper-slide-visible.swiper-slide-active').click(function () {
-    idx = $(this).index();
-    item = $('.desc-wrap').eq(idx).find('.hide-el')
-    const all=gsap.to('.desc-wrap .hide-el', {y:'-100%',paused: true,opacity:0})
-    const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.5,paused: true,opacity:1})
-    all.play()
-    motion.play()
-})
-$('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click')
+//   $('.swiper-slide.swiper-slide-visible.swiper-slide-active').click(function () {
+//     idx = $(this).index();
+//     item = $('.desc-wrap').eq(idx).find('.hide-el')
+//     const all=gsap.to('.desc-wrap .hide-el', {y:'-100%',paused: true,opacity:0})
+//     const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.5,paused: true,opacity:1})
+//     all.play()
+//     motion.play()
+// })
+// $('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click')
 
 
 
@@ -115,18 +115,34 @@ $('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click
     if ($('.menu-area').hasClass('fixed')) {
       $('.menu-area').removeClass('fixed')
     }
-
-
+    
     // $('.btn-menu').toggleClass('close');
     //gnb-pop이 active클래스 있다면 삭제, 없다면 추가
     if ($('.gnb-pop').hasClass('active')) {
       $('.gnb-pop').removeClass('active')
-      menu.reverse()
+
+      const curr = $(window).scrollTop();
+      const target = $('.swiper-pagination').offset().top;
+      if (curr >= target) {
+        $('.menu-area').addClass('fixed')
+      } else {
+        $('.menu-area').removeClass('fixed')
+      }
+      // menu.reverse()
     } else {
       $('.gnb-pop').addClass('active')
-      menu.play()
+      // menu.play()
     }
+
+
+
   })
+
+  $('.btn-menu').click(function (e) {
+    e.preventDefault();
+    $('.menu-wrap-mb').toggleClass('active');
+    $('.btn-menu').toggleClass('close');
+})
 
   menu = gsap.to('.header .gnb-pop', {
     opacity:1,
@@ -235,7 +251,7 @@ brand.from('.video-area',{
 signature =gsap.timeline({
   scrollTrigger:{
     trigger:'.sc-signature',
-      start:"0% 80%",//트리거기준 0%위치, 윈도우기준0%
+      start:"30% 80%",//트리거기준 0%위치, 윈도우기준0%
       end:"100% 80%",
       markers:true,
       scrub:1,
@@ -244,9 +260,20 @@ signature =gsap.timeline({
 
 signature.addLabel('motion2')
 
-.from('.signature-area',{
-  opacity:0
-})
+.fromTo('.sg-bg',{
+  opacity:0,
+  scale:0.3,
+},{
+  opacity:1,
+  scale:1,
+},'motion2')
+
+.fromTo('.sc-signature .signature-area::after',{
+  width:0,
+  
+},{
+  width:1000,
+},'motion2')
 
 
 footer =gsap.timeline({
