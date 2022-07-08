@@ -125,22 +125,20 @@
     border: 2px solid #c2b093;
     border-radius: 50px;
     color: #c2b093;
-    line-height: 45px;
+    line-height: 50px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    
 
     z-index: 1;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    transition: all 0.8s;
+    transition:all .5s, color 0.1;  
 }
-
 .intro-area .link-intro:hover {
     color: #fff;
-
+    box-shadow:500px 0 0 0 #c2b093 inset;
+    background: #c2b093;
+    transition: 2.5s;
 
 }
 

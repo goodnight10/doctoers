@@ -134,14 +134,16 @@ $(function () {
       // menu.play()
     }
 
-
-
   })
 
+  //메뉴 닫힘버튼
   $('.btn-menu').click(function (e) {
     e.preventDefault();
-    $('.menu-wrap-mb').toggleClass('active');
+    // $('.menu-wrap-mb').toggleClass('active');
     $('.btn-menu').toggleClass('close');
+
+
+
 })
 
   menu = gsap.to('.header .gnb-pop', {
