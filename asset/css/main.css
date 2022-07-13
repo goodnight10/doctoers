@@ -1,4 +1,5 @@
 /* 메인슬라이드-------------------------------- */
+
 .sc-slide {
     margin-top: 24px;
 }
@@ -402,4 +403,186 @@
 
 .sc-signature .desc-box .desc {
     line-height: 20px;
+}
+
+
+
+
+
+.sc-ask{
+    color: #fff;
+    padding: 0 60px;
+    
+    background-size: cover;
+    background: url(../images/footer-bg.jpg) no-repeat center 100%;
+}
+.sc-ask .sc-ask-bottom{
+    padding: 0 60px;
+}
+.sc-ask .common-inner{
+    /* padding: 0 60px; */
+    display: flex;
+}
+
+
+.sc-ask .sc-ask-top{
+    color: #fff;
+}
+.sc-ask .common-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sc-ask .contact-area{
+    width: 75%;
+}
+.sc-ask .corp{
+    font-size: 50px;
+    text-align: center;
+    padding: 70px 0 120px;
+}
+.sc-ask .contact-wrap{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+
+}
+.sc-ask .contact-box{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sc-ask .contact-box::after{
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 0px;
+    width: 1px;
+    height: 80%;
+    background: #707070;
+}
+.sc-ask .contact-box:last-child:after{
+    display: none;
+}
+.sc-ask .contact-box .contact{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.sc-ask .contact-box .link-contact{
+    line-height: 1.6;
+
+}
+.sc-ask .contact-box .link-contact.kakao{
+    height: 53px; width: 54px;
+    background: url(../images/plus.png) 100% no-repeat;
+    background-size:cover;
+    display: inline-block;
+}
+.sc-ask .contact-box .link-contact.call{
+    font-size: 34px;
+}
+.sc-ask .contact-box .link-contact.map{
+    font-size: 18px;
+    text-align: center;
+}
+.sc-ask .reserve-form{
+    width: 30%;
+    text-align: center;
+}
+
+.sc-ask .reserve{
+    background: url(../images/re-bg.jpg) 100% no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+    padding: 40px;
+}
+.sc-ask .reserve legend{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sc-ask .name-wrap{
+    width: 84%;
+    margin: 0 auto;
+}
+.sc-ask .name-box{
+    width: 100%;
+    padding: 8px 5px;
+    height: 3.8em;
+    background: #fff;
+    box-sizing: border-box;
+}
+.sc-ask .call-wrap{
+    width: 84%;
+    margin: 0 auto;
+    margin-top:15px;
+}
+.sc-ask .call-box{
+    width: 100%;
+    padding: 8px 5px;
+    height: 3.8em;
+    background: #fff;
+    box-sizing: border-box;
+}
+.sc-ask .select-wrap{
+    width: 84%;
+    margin: 15px auto;
+}
+.sc-ask .select-box{
+    width: 100%;
+    padding: 8px 5px;
+    height: 3.8em;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+
+.sc-ask .agr-label{
+    font-size: 14px;
+    vertical-align: top;
+    line-height: 30px;
+}
+.sc-ask .agr-label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+    margin-right: 10px;
+    transform: translateY(5px);
+}
+.sc-ask .agr-label.active::before{
+    content :'✔';
+}
+
+
+
+
+
+
+
+.sc-ask label{
+    /* margin-top:20px; */
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+
+.sc-ask .reserve .btn-reserv{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 275px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #b6a58b;
+    padding: 8px;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    cursor: pointer;
 }

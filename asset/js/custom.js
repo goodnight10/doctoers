@@ -56,6 +56,8 @@ $(function () {
 
 
 
+
+
       /**
      * 헤더 색상변환, 고정
      *
@@ -100,6 +102,17 @@ $(function () {
      * @since 2022-07-06
      * @author jy
      */
+       $(window).scroll(function () {
+       const po = $(window).scrollTop();
+       const circle = $('.main-slide').offset().top;
+       if (circle >= po) {
+         $('.btn-reserve').addClass('circle')
+       } else {
+         $('.btn-reserve').removeClass('circle')
+       }
+      })
+
+
 
   $('.btn-menu').click(function (e) {
     e.preventDefault();
@@ -323,3 +336,10 @@ footer.addLabel('motion3',{
 
 
 })
+
+function scrollRotate() {
+  let image = document.getElementById("btn-scroll");
+image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+}
+
+window.addEventListener('scroll',scrollRotate);
