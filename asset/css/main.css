@@ -11,10 +11,12 @@
 .sc-slide figure {
     display: block;
     position: relative;
+    height: 100%;
 }
 
 .sc-slide img {
     width: 100%;
+    height: 100%;
     transform: scale(1.1);
     object-fit: cover;
 }
@@ -48,10 +50,6 @@
     overflow: hidden;
 }
 
-.sc-slide .swiper-slide.swiper-slide-visible.swiper-slide-active img {
-    transform: scale(1);
-    transition: 4s;
-}
 
 .sc-slide .swiper-pagination {
     position: absolute;
@@ -410,11 +408,40 @@
 
 
 .sc-ask{
+    overflow: hidden;
+    position: relative;
     color: #fff;
     padding: 0 60px;
-    
-    background-size: cover;
-    background: url(../images/footer-bg.jpg) no-repeat center 100%;
+    height: calc(100vh - 91px);
+    /* background-size: cover; */
+    /* background: url(../images/footer-bg.jpg) no-repeat center / cover; */
+    padding-bottom: 300px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.sc-ask::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/footer-bg.jpg) no-repeat center / cover;
+    z-index: -1;
+    transform: scale(1.2);
+    transition: transform 10s;
+}
+.sc-ask.active::before{
+    transform: scale(1);
+}
+
+.sc-ask .bg{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 .sc-ask .sc-ask-bottom{
     padding: 0 60px;
