@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>Document</title>
+    <title>가로수길 닥터스피부과 > Antiaging center</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="./asset/images/favicon-32x32.ico">
     <link rel="stylesheet" href="./asset/css/layout.css">
     <link rel="stylesheet" href="./asset/css/main.css">
 
@@ -38,7 +38,7 @@
                 <div class="menu-wrap">
                     <a href="" class="btn-reserve circle"><span class="txt">상담예약신청</span></a>
                     <a href="" class="btn-menu">
-                        <span class="blind">메뉴열림</span>
+                        <span class="blind">메뉴열림/닫힘</span>
                         <i class="bar1"></i>
                         <i class="bar2"></i>
                         <i class="bar3"></i>
@@ -51,12 +51,12 @@
                     <fieldset>
                         <legend>상담/예약 신청</legend>
                         <div class="name-wrap">
-                            <label for="name" class="blind">이름</label>
-                            <input class="name-box" type="text" id="name" placeholder="이름">
+                            <label for="name-1" class="blind">이름</label>
+                            <input class="name-box" type="text" id="name-1" placeholder="이름">
                         </div>
                         <div class="call-wrap">
-                            <label for="call" class="blind">연락처</label>
-                            <input class="call-box" type="text" id="call" placeholder="연락처 ex)01022221111">
+                            <label for="call-1" class="blind">연락처</label>
+                            <input class="call-box" type="text" id="call-1" placeholder="연락처 ex)01022221111">
                         </div>
                         <div class="select-wrap">
                             <label for="" class="blind">상담형식 선택</label>
@@ -65,11 +65,31 @@
                                 <option value="">전화상담</option>
                             </select>
                         </div>
-                        <input type="checkbox" class="agr"><label for="agr" class="agr-label">개인정보 수집/이용 동의하기</label>
+                        <button class="btn-agr">개인정보 수집/이용 동의하기</button>
                         <button class="btn-reserv" type="button">상담신청</button>
                     </fieldset>
                     <button class="btn-close" type="button"><span class="blind">닫기</span></button>
                 </form>
+            </div>
+            <div class="pv-pop">
+                <a href="" class="btn-pv">전체선택</a>
+                <div class="pv-wrap">
+                    <input type="checkbox" class="agr-pv" name="agr" id="agr1-pv"><label for="agr1-pv"
+                        class="agr-pv-label">[필수] 개인정보 수집 및 이용에
+                        동의합니다.</label>
+                </div>
+                <div class="pv-wrap">
+                    <input type="checkbox" class="agr-pv" name="agr" id="agr2-pv"><label for="agr2-pv"
+                        class="agr-pv-label">[선택] 개인정보의 전자차트 관리업체
+                        TNH㈜ (약 처방 및 의료보험 청구), ㈜엠에스지(홈페이지 운영 및 관리) 등 제3자 제공에 동의합니다.</label>
+                </div>
+                <div class="pv-wrap">
+                    <input type="checkbox" class="agr-pv" name="agr" id="agr3-pv"><label for="agr3-pv"
+                        class="agr-pv-label">[선택] 예약 및 시술 안내, 이벤트 안내
+                        등 마케팅 문자 및 이메일 수신에 동의합니다.</label>
+                </div>
+                <a href="" class="link-pv">개인정보취급방침 자세히보기</a>
+                <button class="btn-close" type="button"><span class="blind">닫기</span></button>
             </div>
             <div class="gnb-pop">
                 <nav>
@@ -77,7 +97,7 @@
                         <li class="gnb-item g01">
                             <a href="" class="link-gnbbox">
                                 <span class="num">01</span>
-                                <h3 class="title">Avenue - D</h3>
+                                <p class="title">Avenue - D</p>
                             </a>
                             <ul class="gnbbox-list">
                                 <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
@@ -90,7 +110,7 @@
                         <li class="gnb-item g02">
                             <a href="" class="link-gnbbox">
                                 <span class="num">02</span>
-                                <h3 class="title">Avenue - D</h3>
+                                <p class="title">Avenue - D</p>
                             </a>
                             <ul class="gnbbox-list">
                                 <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
@@ -103,7 +123,7 @@
                         <li class="gnb-item g03">
                             <a href="" class="link-gnbbox">
                                 <span class="num">03</span>
-                                <h3 class="title">Avenue - D</h3>
+                                <p class="title">Avenue - D</p>
                             </a>
                             <ul class="gnbbox-list">
                                 <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
@@ -116,7 +136,7 @@
                         <li class="gnb-item g04">
                             <a href="" class="link-gnbbox">
                                 <span class="num">04</span>
-                                <h3 class="title">Avenue - D</h3>
+                                <p class="title">Avenue - D</p>
                             </a>
                             <ul class="gnbbox-list">
                                 <li class="gnbbox-item"><a href="" class="link-gnbsub">Brand Story</a></li>
@@ -182,7 +202,8 @@
                     </div>
                     <div class="doctors-group-wrap g01">
                         <div class="img-box">
-                            <img src="./asset/images/1-1.jpg" alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
+                            <img src="./asset/images/1-1.jpg"
+                                alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
                         </div>
                         <div class="desc-box">
                             <h3 class="title">Daily Life</h3>
@@ -191,7 +212,8 @@
                     </div>
                     <div class="doctors-group-wrap g02">
                         <div class="img-box">
-                            <img src="./asset/images/1-2.jpg" alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
+                            <img src="./asset/images/1-2.jpg"
+                                alt="Daily Life 일상 속에서 마주하는 수 많은 피부 고민들만큼 닥터스는 당신의 일상에 스며들 것입니다." class="desc-img">
                         </div>
                         <div class="desc-box">
                             <h3 class="title">Daily Life</h3>
@@ -211,16 +233,15 @@
                 </div>
                 <div class="video-area">
                     <video class="video-wrap" muted autoplay playsinline loop controls webkit-playsinline>
-                        <source src="http://www.dr-antiaging.com/video/main_cont03_vodeo01_min_v3.mp4"
-                           type="video/mp4">
+                        <source src="http://www.dr-antiaging.com/video/main_cont03_vodeo01_min_v3.mp4" type="video/mp4">
                         </source>
                     </video>
-                   <div class="video-bg">
-                       <span class="title">GAROSU-GIL DOCTORS</span>
-                       <p class="desc">가로수길 닥터스는 K-Beauty의 중심, 가로수길에 위치한 국내 최초 플래그쉽 클리닉으로<br>
-                           VIP분들을 위한 프라이빗 서비스와 해외 고객분들을 위한 글로벌 안티에이징센터로<br>
-                           마련되어 있습니다.</p>
-                   </div>
+                    <div class="video-bg">
+                        <span class="title">GAROSU-GIL DOCTORS</span>
+                        <p class="desc">가로수길 닥터스는 K-Beauty의 중심, 가로수길에 위치한 국내 최초 플래그쉽 클리닉으로<br>
+                            VIP분들을 위한 프라이빗 서비스와 해외 고객분들을 위한 글로벌 안티에이징센터로<br>
+                            마련되어 있습니다.</p>
+                    </div>
                 </div>
             </section>
             <div class="common-inner">
@@ -235,7 +256,8 @@
                         <span class="sg-bg"></span>
                         <a href="" class="signature-wrap">
                             <div class="img-box">
-                                <img src="./asset/images/2-1.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                                <img src="./asset/images/2-1.png"
+                                    alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
                             </div>
                             <div class="desc-box">
                                 <h3 class="title">Natural-aging</h3>
@@ -244,7 +266,8 @@
                         </a>
                         <a href="" class="signature-wrap">
                             <div class="img-box">
-                                <img src="./asset/images/2-2.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                                <img src="./asset/images/2-2.png"
+                                    alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
                             </div>
                             <div class="desc-box">
                                 <h3 class="title">Natural-aging</h3>
@@ -253,7 +276,8 @@
                         </a>
                         <a href="" class="signature-wrap">
                             <div class="img-box">
-                                <img src="./asset/images/2-3.png" alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
+                                <img src="./asset/images/2-3.png"
+                                    alt="Natural-aging 시간을 이기는 자연스러운 아름다움 기술력과 경험이 집약된 무통 울써마지" class="desc-img">
                             </div>
                             <div class="desc-box">
                                 <h3 class="title">Natural-aging</h3>
@@ -289,12 +313,12 @@
                             <fieldset>
                                 <legend>상담/예약 신청</legend>
                                 <div class="name-wrap">
-                                    <label for="name" class="blind">이름</label>
-                                    <input class="name-box" type="text" id="name" placeholder="이름">
+                                    <label for="name-2" class="blind">이름</label>
+                                    <input class="name-box" type="text" id="name-2" placeholder="이름">
                                 </div>
                                 <div class="call-wrap">
-                                    <label for="call" class="blind">연락처</label>
-                                    <input class="call-box" type="text" id="call" placeholder="연락처 ex)01022221111">
+                                    <label for="call-2" class="blind">연락처</label>
+                                    <input class="call-box" type="text" id="call-2" placeholder="연락처 ex)01022221111">
                                 </div>
                                 <div class="select-wrap">
                                     <label for="" class="blind">상담형식 선택</label>
@@ -303,10 +327,30 @@
                                         <option value="">전화상담</option>
                                     </select>
                                 </div>
-                                <input type="checkbox" class="agr"><label for="agr" class="agr-label">개인정보 수집/이용 동의하기</label>
+                                <button class="btn-agr">개인정보 수집/이용 동의하기</button>
                                 <button class="btn-reserv" type="button">상담신청</button>
                             </fieldset>
                         </form>
+                    </div>
+                    <div class="pv-pop">
+                        <a href="" class="btn-pv">전체선택</a>
+                        <div class="pv-wrap">
+                            <input type="checkbox" class="agr-pv" name="agr-f" id="agr1-pv-f"><label for="agr1-pv-f"
+                                class="agr-pv-label">[필수] 개인정보 수집 및 이용에
+                                동의합니다.</label>
+                        </div>
+                        <div class="pv-wrap">
+                            <input type="checkbox" class="agr-pv" name="agr-f" id="agr2-pv-f"><label for="agr2-pv-f"
+                                class="agr-pv-label">[선택] 개인정보의 전자차트 관리업체
+                                TNH㈜ (약 처방 및 의료보험 청구), ㈜엠에스지(홈페이지 운영 및 관리) 등 제3자 제공에 동의합니다.</label>
+                        </div>
+                        <div class="pv-wrap">
+                            <input type="checkbox" class="agr-pv" name="agr-f" id="agr3-pv-f"><label for="agr3-pv-f"
+                                class="agr-pv-label">[선택] 예약 및 시술 안내, 이벤트 안내
+                                등 마케팅 문자 및 이메일 수신에 동의합니다.</label>
+                        </div>
+                        <a href="" class="link-pv">개인정보취급방침 자세히보기</a>
+                        <button class="btn-close" type="button"><span class="blind">닫기</span></button>
                     </div>
                 </div>
             </section>
@@ -324,9 +368,11 @@
                         </div>
                         <div class="addr-area">
                             <address class="addr-wrap">
-                                <p><span>닥터스피부과의원 신사점</span><span>사업자등록번호 : 259-40-00613</span><span>제휴문의 : msgcoop@naver.com</span></p>
+                                <p><span>닥터스피부과의원 신사점</span><span>사업자등록번호 : 259-40-00613</span><span>제휴문의 :
+                                        msgcoop@naver.com</span></p>
                                 <p><span>대표자 : 성 현 철</span><span>본관 : 서울시 강남구 도산대로 107, 10층 (SYH성형타워)</span></p>
-                                <p><span>별관 : 서울시 강남구 가로수길 17 (신사동 536-17)</span><span>COPYRIGHT ⓒ SINSA DOCTORS. ALL RIGHTS RESERVED</span></p>
+                                <p><span>별관 : 서울시 강남구 가로수길 17 (신사동 536-17)</span><span>COPYRIGHT ⓒ SINSA DOCTORS. ALL
+                                        RIGHTS RESERVED</span></p>
                             </address>
                         </div>
                     </div>
@@ -345,11 +391,6 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-scroll" type="button" id="btn-scroll">
-                <span class="bg">배경</span>
-                <span>0일때 화살표랑 hover-아래스크롤(y축 트랜지션)</span>
-                <span>넘버와 위 스크롤</span>
-            </button>
         </footer>
     </div>
 </body>

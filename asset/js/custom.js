@@ -26,7 +26,7 @@ var swiper = new Swiper(".main-slide", {
 slidesPerView: 1,
 loop: true,
 autoplay: {
-  delay: 4000,
+  delay: 5000,
 },
 effect: 'fade',
 pagination: {
@@ -34,28 +34,6 @@ pagination: {
   clickable: true
 },
 });
-
-
-/**
- * 슬라이드 나타나면 글자도 나타나게
- *
- * @version 1.0.0
- * @since 2022-07-06
- * @author jy
- */
-
-//   $('.swiper-slide.swiper-slide-visible.swiper-slide-active').click(function () {
-//     idx = $(this).index();
-//     item = $('.desc-wrap').eq(idx).find('.hide-el')
-//     const all=gsap.to('.desc-wrap .hide-el', {y:'-100%',paused: true,opacity:0})
-//     const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.5,paused: true,opacity:1})
-//     all.play()
-//     motion.play()
-// })
-// $('.swiper-slide.swiper-slide-visible.swiper-slide-active').eq(0).trigger('click')
-
-
-
 
 
   /**
@@ -73,7 +51,6 @@ if (curr >= target) {
 } else {
   $('.menu-area').removeClass('fixed')
 }
-
 })
 
   /**
@@ -89,28 +66,57 @@ $('.reserve-pop, .dimmed').addClass('active');
 $('body').addClass('hidden');
 
 })
-$('.btn-close, .dimmed').click(function (e) {
+$('.reserve-pop .btn-close, .dimmed').click(function (e) {
 e.preventDefault();
+
 $('.reserve-pop, .dimmed').removeClass('active');
 $('body').removeClass('hidden');
+ if($('.gnb-pop').hasClass('active')){
+  $('body').addClass('hidden');
+ }
 })
 
-  /**
- * 메뉴
- *
- * @version 1.0.0
- * @since 2022-07-06
- * @author jy
- */
-   $(window).scroll(function () {
-   const po = $(window).scrollTop();
-   const circle = $('.main-slide').offset().top;
-   if (circle >= po) {
-     $('.btn-reserve').addClass('circle')
-   } else {
-     $('.btn-reserve').removeClass('circle')
-   }
-  })
+$('.header .btn-agr').click(function(e){
+  e.preventDefault();
+  if ($('.header .pv-pop').hasClass('active')) {
+    $('.header .pv-pop').removeClass('active')
+  } else {
+    $('.header .pv-pop').addClass('active')
+  }
+  
+})
+$('.header .pv-pop .btn-close, .dimmed').click(function(e){
+  e.preventDefault();
+  if ($('.header .pv-pop').hasClass('active')) {
+    $('.header .pv-pop').removeClass('active')
+  }
+  
+})
+
+
+//하단 예약메뉴
+$('.sc-ask .btn-agr').click(function(e){
+  e.preventDefault();
+  if ($('.sc-ask .pv-pop').hasClass('active')) {
+    $('.sc-ask .pv-pop').removeClass('active')
+  } else {
+    $('.sc-ask .pv-pop').addClass('active')
+  }
+  
+})
+
+$('.sc-ask .pv-pop .btn-close').click(function(e){
+  e.preventDefault();
+  if ($('.sc-ask .pv-pop').hasClass('active')) {
+    $('.sc-ask .pv-pop').removeClass('active')
+  }
+})
+
+
+
+
+
+
 
 
 menu = gsap.fromTo('.header .gnb-pop .gnb-item',{
@@ -127,35 +133,31 @@ menu.paused();
 $('.btn-menu').click(function (e) {
 e.preventDefault();
 if(!$(this).hasClass('close')){
-  //첫클릭
+  //첫클릭. 
   menu.restart();
-  $('.header .btn-reserve').removeClass('circle')
+  $('.menu-area').removeClass('fixed')
+  
 }else{
   //닫기눌렀을때
-  $('.header .btn-reserve').addClass('circle')
+  $(window).scroll(function () {
+    const curr1 = $(window).scrollTop();
+    const target1 = $('.swiper-pagination').offset().top;
+    if (curr1 >= target1) {
+      $('.menu-area').addClass('fixed')
+    } else {
+      $('.menu-area').removeClass('fixed')
+    }
+    });
+  
 }
-
-
-
-
   $('body').toggleClass('hidden');
   $('.btn-menu').toggleClass('close');
-  $('.gnb-pop').toggleClass('active')
-  // $('.header').toggleClass('menu-active');
-
-
-
+  $('.gnb-pop').toggleClass('active');
 })
 
 
 
 
-// menu = gsap.to('.header .gnb-pop', {
-//   opacity:1,
-//   y:-800,
-//   display: 'block',
-//   paused: true
-// })
 
   /**
  * 메뉴 마우스 올리면 오퍼시티변경
@@ -179,8 +181,11 @@ $('.gnb-item').eq(0).trigger('hover')
  * @since 2022-07-06
  * @author jy
  */
-$('.agr-label').click(function(){
-$('.agr-label').toggleClass('active')
+$('.header .agr-label').click(function(){
+$('.header .agr-label').toggleClass('active')
+})
+$('.sc-ask .agr-label').click(function(){
+$('.sc-ask .agr-label').toggleClass('active')
 })
 
 
@@ -198,6 +203,44 @@ $('.family-list').toggleClass('active');
 
 
 
+/**
+ *동의 체크, 해제
+ * @version 1.0.0
+ * @since 2022-08-15
+ * @author jy
+ */
+//=============================================
+//메뉴active와 전체선택
+$('.header .btn-pv').click(function (e) {
+  e.preventDefault();
+  $('input:checkbox[name="agr"]').prop('checked', true);
+  $('.header .pv-wrap').addClass('active');
+})
+$('.sc-ask .btn-pv').click(function (e) {
+  e.preventDefault();
+  $('input:checkbox[name="agr-f"]').prop('checked', true);
+  $('.sc-ask .pv-wrap').addClass('active');
+})
+
+
+$('.header .pv-wrap').click(function () {
+  if ($(this).find('input').prop('checked') == true) {
+      $(this).addClass('active');
+
+  } else {
+      $(this).removeClass('active');
+
+  }
+});
+$('.sc-ask .pv-wrap').click(function () {
+  if ($(this).find('input').prop('checked') == true) {
+      $(this).addClass('active');
+
+  } else {
+      $(this).removeClass('active');
+
+  }
+});
 
 
 doctorsgroup =gsap.timeline({
@@ -242,7 +285,6 @@ scrollTrigger:{
   trigger:'.sc-brand-story',
   start:"0% 60%",//트리거기준 0%위치, 윈도우기준0%
   end:"70% 80%",
-  markers:true,
   toggleActions:"play pause pause reset"
 },
 x:-1000
@@ -282,17 +324,6 @@ width:1000,
 
 
 
-// askBg = gsap.from('.sc-ask .bg',10,{
-//   scale:1.2,
-// })
-
-// ScrollTrigger.create({
-//   trigger:".sc-ask",
-//   start:"top 90%",
-//   end:"bottom top",
-//   markers:true,
-//   animation:askBg
-// })
 
 
 ScrollTrigger.create({
@@ -309,55 +340,10 @@ toggleClass: "active"
 
 
 
-// footer =gsap.timeline({
-//   scrollTrigger:{
-//     trigger:'.footer',
-//       start:"0% 70%",//트리거기준 0%위치, 윈도우기준0%
-//       end:"60% 70%",
-//       markers:true,
-//       scrub:1,
-//   }
-// })
 
-// footer.addLabel('motion3',{
-//   stagger:0.5
-// })
-
-// .from('.corp',{
-//   opacity:0,
-//   y:-100
-// },'motion3')
-
-// .from('.reserve-form',{
-//   opacity:0,
-//   x:10
-// },'motion3')
-
-// .from('.contact-box.c01',{
-//   opacity:0,
-//   y:30,
-//   stagger:0.3
-// })
-// .from('.contact-box.c02',{
-//   opacity:0,
-//   y:30,
-//   stagger:0.3
-// })
-// .from('.contact-box.c03',{
-//   opacity:0,
-//   y:30,
-//   stagger:0.3
-// })
 
 
 
 
 
 })
-
-function scrollRotate() {
-let image = document.getElementById("btn-scroll");
-image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
-}
-
-window.addEventListener('scroll',scrollRotate);

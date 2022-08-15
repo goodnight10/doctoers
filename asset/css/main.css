@@ -17,7 +17,7 @@
 .sc-slide img {
     width: 100%;
     height: 100%;
-    transform: scale(1.1);
+    s
     object-fit: cover;
 }
 
@@ -27,27 +27,28 @@
     position: absolute;
     z-index: 2;
     color: #fff;
+    overflow: hidden;
 }
 
 .sc-slide em {
     font-weight: bold;
 }
 
-.sc-slide figcaption {
-    display: block;
-}
 
-.sc-slide .desc1 {
+
+.sc-slide .desc-wrap p span{
     margin-left: 10px;
     font-size: 20px;
     line-height: 20px;
     overflow: hidden;
+    transform: translateY(110%);
 }
 
-.sc-slide .desc2 {
+.sc-slide .desc-wrap h3 span{
     font-size: 180px;
     line-height: 250px;
     overflow: hidden;
+    transform: translateY(110%);
 }
 
 
@@ -70,26 +71,37 @@
     opacity: 1;
 }
 
-.sc-slide .swiper-pagination-bullet-active {}
 
-.sc-slide .swiper-slide .title {
+.sc-slide .swiper-slide h3 {
     transform: translateY(-100%);
     transition: 2.3s;
+    overflow: hidden;
 }
 
 .sc-slide .swiper-slide p {
     transform: translateY(-100%);
     transition: 1s;
+    overflow: hidden;
 }
+
 
 .sc-slide .swiper-slide-active .title {
     transform: translateY(0);
+    overflow: hidden;
 }
 
 .sc-slide .swiper-slide-active p {
     transform: translateY(0);
+    overflow: hidden;
+}
+.sc-slide .swiper-slide-active img {
+    transition: 5s;
+    transform: scale(1.1);
 }
 
+.sc-slide .swiper-slide-active .hide-el{
+    overflow: hidden;
+}
 
 
 
@@ -195,9 +207,16 @@
 .sc-doctors-group {
     padding: 250px 0 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
 }
 
+.sc-doctors-group .intro-area {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 .sc-doctors-group .intro-area .subtitle {
     padding-bottom: 30px;
 }
@@ -235,8 +254,8 @@
 .sc-doctors-group .desc-box .title {
     font-size: 50px;
     padding: 2% 0;
-    /* webkit-text-fill-color: transparent; */
-    background: linear-gradient(0deg, #333 55%, #fff 0);
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(0deg,#333 55%,#fff 0);
     -webkit-background-clip: text;
 
 }
@@ -413,9 +432,7 @@
     color: #fff;
     padding: 0 60px;
     height: calc(100vh - 91px);
-    /* background-size: cover; */
-    /* background: url(../images/footer-bg.jpg) no-repeat center / cover; */
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -446,10 +463,7 @@
 .sc-ask .sc-ask-bottom{
     padding: 0 60px;
 }
-.sc-ask .common-inner{
-    /* padding: 0 60px; */
-    display: flex;
-}
+
 
 
 .sc-ask .sc-ask-top{
@@ -458,19 +472,21 @@
 .sc-ask .common-inner{
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .sc-ask .contact-area{
     width: 75%;
+    text-align: center;
 }
 .sc-ask .corp{
+    display: block;
     font-size: 50px;
-    text-align: center;
     padding: 70px 0 120px;
 }
 .sc-ask .contact-wrap{
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 70px ;
 
 }
 .sc-ask .contact-box{
@@ -478,15 +494,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .sc-ask .contact-box::after{
     content: "";
     position: absolute;
-    top: 15%;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 1px;
-    height: 80%;
-    background: #707070;
+    height: 80px;
+    /* background: #707070; */
+    background: #fff;
 }
 .sc-ask .contact-box:last-child:after{
     display: none;
@@ -526,6 +544,30 @@
 .sc-ask .reserve legend{
     font-size: 28px;
     margin-bottom: 20px;
+}
+
+.sc-ask .btn-agr::before{
+    background: #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+.sc-ask .btn-agr{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    color: #fff;
+}
+.sc-ask .btn-agr.active::before{
+    content :'✔';
 }
 
 .sc-ask .name-wrap{
@@ -612,4 +654,105 @@
     font-size: 16px;
     line-height: 1.6;
     cursor: pointer;
+}
+
+
+
+
+.sc-ask .pv-pop{
+    position: absolute;
+    left: 50%;
+    margin-left: 36%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px; height: 370px;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 26;
+    padding: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    display: none;
+    opacity: 0;
+}
+.sc-ask .pv-pop.active{
+    display: block;
+    opacity: 1;
+}
+.sc-ask .btn-pv{
+    display: block;
+    border: 1px solid #006241;
+    color: #006241;
+    line-height: 55px;
+    border-radius: 10px;
+    margin: 20px 10px 30px;
+    font-weight: 500;
+    text-align: center;
+}
+.sc-ask .btn-pv:hover{
+    background: #006241;
+    color: #fff;
+}
+
+.sc-ask .pv-pop label{
+    font-size: 12px;
+    font-weight: 300;
+    color: #a0a0a0;
+    line-height: 1.4;
+    float: left;
+    padding-left: 25px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.sc-ask .pv-pop label::before{
+    background: #fff;
+    height: 16px; width: 16px;
+    border-radius: 50%;
+    border: 1px solid #bbb; 
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0px;
+}
+
+.sc-ask .pv-wrap.active label::before {
+    background: #006241;
+}
+
+.sc-ask .pv-pop .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.sc-ask .pv-pop .btn-close:before, .sc-ask .pv-pop .btn-close:after {
+    display: block;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+}
+
+.sc-ask .pv-pop .btn-close:before {
+    transform: rotate(45deg);
+}
+.sc-ask .pv-pop .btn-close:after {
+    transform: rotate(-45deg);
+}
+
+.sc-ask .pv-pop .link-pv{
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    color: #bbb;
+    font-weight: 300;
+    text-decoration: underline;
+    margin-top: 20px;
 }
