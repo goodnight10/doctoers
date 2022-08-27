@@ -17,7 +17,6 @@
 .sc-slide img {
     width: 100%;
     height: 100%;
-    s
     object-fit: cover;
 }
 
@@ -140,10 +139,8 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    
-
     z-index: 1;
-    transition:all .5s, color 0.1;  
+    transition:all .5s;  
 }
 .intro-area .link-intro:hover {
     color: #fff;
@@ -152,28 +149,6 @@
     transition: 2.5s;
 
 }
-
-/* .intro-area .link-intro:hover::after{
-    width: 200px;
-    height: 50px;
-    z-index: -1;
-}
-.intro-area .link-intro::after{
-    content: "";
-    width: 0;
-    height: 120%;
-    top: 0;
-    position: absolute;
-    left: 0;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    transition: all 0.8s;
-    background: #c2b093;
-} */
-
-
 
 .intro-area .link-intro::after {
     content: '';
@@ -194,14 +169,6 @@
     z-index: -1;
 }
 
-/* .intro-area .link-intro::after{
-    content: '';
-    display: inline-block;
-    background: url(../images/arrow-b.svg) 100% center;
-    background-position: cover; 
-    width: 20px; height: 10px;
-    box-sizing: border-box;
-} */
 
 /* 닥터스그룹-------------------------------- */
 .sc-doctors-group {
@@ -364,7 +331,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(../images/2-bg.png) center no-repeat;
-    background-position: cover;
     width: 457px;
     height: 405px;
     display: inline-block;
@@ -411,7 +377,6 @@
     transform: scale(1.2);
 }
 
-.sc-signature .desc-box {}
 
 .sc-signature .desc-box .title {
     font-size: 50px;
