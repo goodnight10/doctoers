@@ -313,9 +313,7 @@ ScrollTrigger.create({
 trigger:".sc-ask",
 start:"top 90%",
 end:"bottom top",
-// markers:true,
 toggleClass: "active"
-// toggleClass: {targets: ".reserve-form", className: "active"}
 })
 
 
