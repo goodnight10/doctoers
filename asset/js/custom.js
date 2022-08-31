@@ -156,22 +156,6 @@ if(!$(this).hasClass('close')){
 })
 
 
-
-  /**
- *동의 체크하면 체크,해제
- *
- * @version 1.0.0
- * @since 2022-07-06
- * @author jy
- */
-$('.header .agr-label').click(function(){
-$('.header .agr-label').toggleClass('active')
-})
-$('.sc-ask .agr-label').click(function(){
-$('.sc-ask .agr-label').toggleClass('active')
-})
-
-
 /**
  * 패일리사이트에 마우스 올리면 메뉴나타나기
  *
