@@ -279,12 +279,6 @@ opacity:1,
 scale:1,
 },'motion2')
 
-.fromTo('.sc-signature .signature-area::after',{
-width:0,
-
-},{
-width:1000,
-},'motion2')
 
 
 
