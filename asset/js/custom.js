@@ -157,23 +157,6 @@ if(!$(this).hasClass('close')){
 
 
 
-
-
-  /**
- * 메뉴 마우스 올리면 오퍼시티변경
- *
- * @version 1.0.0
- * @since 2022-07-06
- * @author jy
- */
-
-$('.gnb-item').hover(function(){
-$(this).addClass('active');
-$(this).siblings().removeClass('active');
-})
-$('.gnb-item').eq(0).trigger('hover')
-
-
   /**
  *동의 체크하면 체크,해제
  *
