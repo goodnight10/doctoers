@@ -121,10 +121,10 @@ $('.sc-ask .pv-pop .btn-close').click(function(e){
 
 menu = gsap.fromTo('.header .gnb-pop .gnb-item',{
 opacity:0,
-yPercent:10
+yPercent:-20
 },{
 opacity:1,
-stagger:0.2,
+stagger:0.4,
 yPercent:0
 })
 menu.paused();

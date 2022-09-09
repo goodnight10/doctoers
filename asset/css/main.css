@@ -141,7 +141,6 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: all .5s;
 }
 
 .intro-area .link-intro:hover {
@@ -149,7 +148,6 @@
     box-shadow: 500px 0 0 0 #c2b093 inset;
     background: #c2b093;
     transition: 2.5s;
-
 }
 
 .intro-area .link-intro::after {
@@ -163,7 +161,6 @@
     z-index: 1;
     background: #c2b093;
     transition: all .8s;
-    display: block;
 }
 
 .intro-area .link-intro:hover::after {
